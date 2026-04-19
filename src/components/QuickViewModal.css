@@ -1,0 +1,253 @@
+/* Backdrop */
+.qv-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 44, 44, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: qv-fade-in 0.3s ease;
+}
+
+@keyframes qv-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal */
+.qv-modal {
+  background: var(--ivory);
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  animation: qv-slide-up 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes qv-slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
+.qv-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: var(--ivory);
+  border: 1px solid var(--light-gray);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--charcoal);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.qv-close:hover {
+  background: var(--ivory-dark);
+  border-color: var(--warm-gray);
+}
+
+/* Image panel */
+.qv-image {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--ivory-dark);
+}
+
+.qv-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.qv-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 40px;
+}
+
+/* Info panel */
+.qv-info {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.qv-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 10px;
+}
+
+.qv-name {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.qv-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.qv-price {
+  font-size: 18px;
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+.qv-compare {
+  font-size: 14px;
+  color: var(--warm-gray);
+  text-decoration: line-through;
+}
+
+.qv-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--warm-gray);
+  margin-bottom: 20px;
+}
+
+.qv-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.qv-features li {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  border: 1px solid var(--light-gray);
+  padding: 4px 10px;
+}
+
+/* Quantity */
+.qv-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.qv-qty-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.qv-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+}
+
+.qv-qty button {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--charcoal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.qv-qty button:hover { background: var(--ivory-dark); }
+
+.qv-qty span {
+  width: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--charcoal);
+  border-left: 1px solid var(--light-gray);
+  border-right: 1px solid var(--light-gray);
+  line-height: 38px;
+}
+
+/* Buttons */
+.qv-add-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.25s, color 0.25s;
+}
+
+.qv-add-btn--added {
+  background: #4a7c59 !important;
+}
+
+.qv-detail-link {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--warm-gray);
+  text-align: center;
+  display: block;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.qv-detail-link:hover { color: var(--charcoal); }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .qv-modal {
+    grid-template-columns: 1fr;
+    max-height: 95vh;
+  }
+
+  .qv-image {
+    aspect-ratio: 4/3;
+  }
+
+  .qv-info {
+    padding: 32px 24px;
+  }
+
+  .qv-name { font-size: 22px; }
+}

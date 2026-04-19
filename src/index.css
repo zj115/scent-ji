@@ -1,0 +1,126 @@
+@import './styles/animations.css';
+
+:root {
+  --ivory: #F8F5F2;
+  --ivory-dark: #EDE8E2;
+  --sandalwood: #8B6E55;
+  --sandalwood-light: #B8956F;
+  --red-accent: #A82020;
+  --charcoal: #2C2C2C;
+  --warm-gray: #6B6560;
+  --light-gray: #D4CFC9;
+  --white: #FFFFFF;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+
+  --max-width: 1280px;
+  --section-padding: 96px 40px;
+  --section-padding-sm: 64px 24px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-sans);
+}
+
+input, textarea, select {
+  font-family: var(--font-sans);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 13px 36px;
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--charcoal);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--sandalwood);
+  border-color: var(--sandalwood);
+  color: var(--white);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 13px 36px;
+  background: transparent;
+  color: var(--charcoal);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--charcoal);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 64px 20px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,61 @@
+/* ─── Easing tokens ─── */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─── Reveal base ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.72s var(--ease-reveal),
+    transform 0.72s var(--ease-reveal);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger helpers */
+.reveal--delay-1 { transition-delay: 0.08s; }
+.reveal--delay-2 { transition-delay: 0.16s; }
+.reveal--delay-3 { transition-delay: 0.24s; }
+.reveal--delay-4 { transition-delay: 0.32s; }
+.reveal--delay-5 { transition-delay: 0.40s; }
+
+/* Fade only (no Y movement) */
+.reveal--fade {
+  transform: none;
+  transition: opacity 0.72s var(--ease-reveal);
+}
+
+/* Slide from left */
+.reveal--left {
+  transform: translateX(-32px);
+  transition:
+    opacity 0.72s var(--ease-reveal),
+    transform 0.72s var(--ease-reveal);
+}
+.reveal--left.reveal--visible { transform: translateX(0); }
+
+/* Scale in */
+.reveal--scale {
+  transform: scale(0.96);
+  transition:
+    opacity 0.6s var(--ease-reveal),
+    transform 0.6s var(--ease-reveal);
+}
+.reveal--scale.reveal--visible { transform: scale(1); }
+
+/* ─── Image load fade ─── */
+.img-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.img-fade.img-fade--loaded {
+  opacity: 1;
+}

@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: 'Sophie M.',
+    location: 'Auckland, NZ',
+    rating: 5,
+    product: 'Peace Lotus Aroma Bracelet',
+    text: 'I bought the Peace Lotus bracelet on a whim and now I never leave the house without it. The scent is so delicate — I only notice it when I bring my wrist close, which makes it feel like a private little ritual. Beautiful piece.',
+  },
+  {
+    id: 2,
+    name: 'Mei L.',
+    location: 'Wellington, NZ',
+    rating: 5,
+    product: 'Rose Crystal Aroma Bracelet',
+    text: 'I received this as a birthday gift from my mum and cried when I opened it. The rose and osmanthus scent reminded me immediately of her garden back home. The packaging alone is worth it — so beautifully done.',
+  },
+  {
+    id: 3,
+    name: 'James K.',
+    location: 'Christchurch, NZ',
+    rating: 5,
+    product: 'Golden Sandal Blessing Bracelet',
+    text: 'Bought this for my wife for our anniversary. She loves sandalwood and this one is exceptional — deep, warm, and lasting. Still going strong at 4 months. Will definitely buy again.',
+  },
+  {
+    id: 4,
+    name: 'Aroha T.',
+    location: 'Hamilton, NZ',
+    rating: 5,
+    product: 'Moon Calm Bead Bracelet',
+    text: 'I wear the Moon Calm bracelet every night and it has genuinely become part of my wind-down routine. I am not sure if it is the lavender or just having a ritual, but I fall asleep more easily since I started wearing it.',
+  },
+  {
+    id: 5,
+    name: 'Claire W.',
+    location: 'Dunedin, NZ',
+    rating: 5,
+    product: 'Sage Blessing Aroma Bracelet',
+    text: 'The quality is remarkable. I have bought aroma jewellery before from larger brands and it never lasts — the scent disappears in a week. This one is still as fragrant as the day it arrived, nearly three months later. Worth every cent.',
+  },
+];

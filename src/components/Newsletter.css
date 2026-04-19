@@ -1,0 +1,109 @@
+.newsletter {
+  background: var(--charcoal);
+  color: var(--ivory);
+  padding: 96px 40px;
+  text-align: center;
+}
+
+.newsletter__inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.newsletter__label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sandalwood-light);
+  margin-bottom: 16px;
+}
+
+.newsletter__title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.newsletter__desc {
+  font-size: 14px;
+  color: rgba(248, 245, 242, 0.6);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.newsletter__form {
+  display: flex;
+  gap: 0;
+  max-width: 420px;
+  margin: 0 auto 16px;
+}
+
+.newsletter__form input {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-right: none;
+  background: rgba(255,255,255,0.05);
+  color: var(--ivory);
+  padding: 14px 20px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.newsletter__form input::placeholder {
+  color: rgba(248, 245, 242, 0.35);
+}
+
+.newsletter__form input:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.newsletter__form button {
+  background: var(--sandalwood);
+  color: var(--ivory);
+  border: 1px solid var(--sandalwood);
+  padding: 14px 28px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+.newsletter__form button:hover {
+  background: var(--sandalwood-light);
+}
+
+.newsletter__thanks {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--sandalwood-light);
+  margin: 20px 0;
+}
+
+.newsletter__note {
+  font-size: 11px;
+  color: rgba(248, 245, 242, 0.3);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    padding: 72px 24px;
+  }
+  .newsletter__form {
+    flex-direction: column;
+  }
+  .newsletter__form input {
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: none;
+  }
+  .newsletter__form button {
+    width: 100%;
+  }
+}

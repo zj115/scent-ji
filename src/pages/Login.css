@@ -1,0 +1,131 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  padding: 40px 24px;
+}
+
+.login-page__inner {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page__logo {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--charcoal);
+  text-decoration: none;
+  margin-bottom: 48px;
+  letter-spacing: 0.04em;
+}
+
+.login-tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 36px;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: -1px;
+}
+
+.login-tab.active {
+  color: var(--charcoal);
+  border-bottom-color: var(--charcoal);
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.login-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form__field label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.login-form__field input {
+  border: 1px solid var(--light-gray);
+  background: var(--white);
+  padding: 13px 14px;
+  font-size: 14px;
+  color: var(--charcoal);
+  outline: none;
+  font-family: var(--font-sans);
+  transition: border-color 0.2s;
+}
+
+.login-form__field input:focus {
+  border-color: var(--sandalwood);
+}
+
+.login-form__submit {
+  width: 100%;
+  padding: 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  margin-top: 8px;
+}
+
+.login-form__forgot {
+  text-align: center;
+  font-size: 12px;
+  color: var(--warm-gray);
+}
+
+.login-form__forgot a {
+  color: var(--sandalwood);
+  text-decoration: underline;
+}
+
+.login-page__back {
+  margin-top: 32px;
+  font-size: 12px;
+  color: var(--warm-gray);
+}
+
+.login-page__back a {
+  color: var(--warm-gray);
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-form__row {
+    grid-template-columns: 1fr;
+  }
+}

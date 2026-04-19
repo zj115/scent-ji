@@ -1,0 +1,218 @@
+.wellness-hero {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.wellness-hero__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+.wellness-hero__image {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory-dark);
+}
+
+.wellness-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.wellness-hero__card:hover .wellness-hero__image img {
+  transform: scale(1.04);
+}
+
+.wellness-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,44,44,0.12);
+  transition: background 0.4s;
+}
+
+.wellness-hero__card:hover .wellness-hero__overlay {
+  background: rgba(44,44,44,0.04);
+}
+
+.wellness-hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  background: var(--ivory-dark);
+}
+
+.wellness-hero__cat {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+  margin-bottom: 20px;
+}
+
+.wellness-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.wellness-hero__excerpt {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.wellness-hero__link {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+}
+
+/* Page header */
+.wellness-page__header {
+  padding-top: 80px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 0;
+}
+
+.wellness-page__label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+  margin-bottom: 12px;
+}
+
+.wellness-page__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 400;
+  color: var(--charcoal);
+  max-width: 520px;
+}
+
+/* Grid */
+.wellness-page__grid {
+  padding: 64px 40px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.wellness-card {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--light-gray);
+  text-decoration: none;
+  color: var(--charcoal);
+  padding: 48px 0;
+}
+
+.wellness-card:first-child {
+  padding-top: 0;
+}
+
+.wellness-card__image {
+  overflow: hidden;
+  background: var(--ivory-dark);
+  margin-right: 64px;
+  aspect-ratio: 4/3;
+  align-self: center;
+}
+
+.wellness-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wellness-card:hover .wellness-card__image img {
+  transform: scale(1.04);
+}
+
+.wellness-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wellness-card__cat {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+}
+
+.wellness-card__title {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--charcoal);
+}
+
+.wellness-card__subtitle {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--warm-gray);
+}
+
+.wellness-card__excerpt {
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wellness-card__link {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .wellness-hero__card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .wellness-hero__image {
+    aspect-ratio: 3/2;
+  }
+  .wellness-hero__text {
+    padding: 48px 32px;
+  }
+  .wellness-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .wellness-card__image {
+    margin-right: 0;
+    aspect-ratio: 3/2;
+  }
+  .wellness-page__grid {
+    padding: 48px 24px 64px;
+  }
+}

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Original source assets (not needed in repo)
+图片/
+
+# Draft documents
+*.docx
+*.pdf
+
+# Claude session
+.claude/

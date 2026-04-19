@@ -1,0 +1,52 @@
+.testimonial-card {
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--ivory-dark);
+}
+
+.testimonial-card__stars {
+  color: var(--sandalwood);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.testimonial-card__text {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonial-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.testimonial-card__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  letter-spacing: 0.04em;
+}
+
+.testimonial-card__sep {
+  color: var(--light-gray);
+}
+
+.testimonial-card__location {
+  font-size: 12px;
+  color: var(--warm-gray);
+}
+
+.testimonial-card__product {
+  font-size: 11px;
+  color: var(--sandalwood);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,39 @@
+.section-title {
+  margin-bottom: 56px;
+}
+
+.section-title--center {
+  text-align: center;
+}
+
+.section-title--right {
+  text-align: right;
+}
+
+.section-title__label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+  margin-bottom: 12px;
+}
+
+.section-title__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-title__subtitle {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.section-title--center .section-title__subtitle {
+  margin: 0 auto;
+}

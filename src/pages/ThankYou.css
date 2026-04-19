@@ -1,0 +1,128 @@
+.thankyou-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+}
+
+.thankyou-page__inner {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.thankyou-page__icon {
+  color: var(--sandalwood);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.thankyou-page__eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sandalwood);
+  margin-bottom: 16px;
+}
+
+.thankyou-page__title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.thankyou-page__subtitle {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--warm-gray);
+  margin-bottom: 40px;
+}
+
+.thankyou-page__message {
+  background: var(--ivory-dark);
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.thankyou-page__message p {
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.thankyou-page__message p:last-child {
+  margin-bottom: 0;
+}
+
+.thankyou-page__message a {
+  color: var(--sandalwood);
+  text-decoration: underline;
+}
+
+.thankyou-page__info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.thankyou-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.thankyou-info-item__icon {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.thankyou-info-item__label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 4px;
+}
+
+.thankyou-info-item__value {
+  font-size: 14px;
+  color: var(--charcoal);
+}
+
+.thankyou-page__ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+
+.thankyou-page__brand {
+  border-top: 1px solid var(--light-gray);
+  padding-top: 32px;
+}
+
+.thankyou-page__brand-name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.thankyou-page__brand-tagline {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}

@@ -1,0 +1,18 @@
+.announcement-bar {
+  background: var(--charcoal);
+  color: var(--ivory);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.announcement-bar a {
+  text-decoration: underline;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.announcement-bar a:hover {
+  opacity: 1;
+}
