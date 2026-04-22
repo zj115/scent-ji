@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import './Header.css';
 
 const SHOP_MENU = [
@@ -26,6 +27,7 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileShopOpen, setMobileShopOpen] = useState(false);
   const { totalItems } = useCart();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const shopRef = useRef(null);
   const currRef = useRef(null);
@@ -182,13 +184,13 @@ export default function Header() {
               </svg>
             </button>
 
-            {/* Login */}
-            <Link to="/login" className="header__icon-btn header__login-link" aria-label="Login">
+            {/* Login / Account */}
+            <Link to={user ? "/account" : "/login"} className="header__icon-btn header__login-link" aria-label={user ? "Account" : "Login"}>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                 <circle cx="12" cy="7" r="4"/>
               </svg>
-              <span className="header__login-text">Login</span>
+              <span className="header__login-text">{user ? "Account" : "Login"}</span>
             </Link>
 
             {/* Cart */}
@@ -267,7 +269,9 @@ export default function Header() {
 
         <div className="header__mobile-divider" />
 
-        <NavLink to="/login" onClick={closeAll} className="header__mobile-login">Login / Create Account</NavLink>
+        <NavLink to={user ? "/account" : "/login"} onClick={closeAll} className="header__mobile-login">
+          {user ? "My Account" : "Login / Create Account"}
+        </NavLink>
         <NavLink to="/cart" onClick={closeAll} className="header__mobile-cart">
           Cart {totalItems > 0 && `(${totalItems})`}
         </NavLink>
