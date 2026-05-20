@@ -41,7 +41,7 @@ Scent-Ji is an e-commerce website designed for browsing and purchasing aromather
 ### Homepage
 The landing page features a clean hero section with brand identity, navigation menu, and featured product imagery.
 
-<img src="./screenshots/homepage-hero.png" width="100%" alt="Scent-Ji Homepage Hero Section" />
+<img src="./screenshots/homepage-hero.jpg" width="100%" alt="Scent-Ji Homepage Hero Section" />
 
 ### Product Collection Grid
 Product browsing interface displaying aromatherapy items with images, names, and pricing in a responsive grid layout.
