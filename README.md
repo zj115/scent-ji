@@ -116,7 +116,7 @@ scent-ji/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/scent-ji.git
+   git clone https://github.com/zj115/scent-ji.git
    cd scent-ji
    ```
 
