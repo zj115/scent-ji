@@ -1,57 +1,42 @@
-# Scent-Ji
+# Scent-Ji 香玑
 
-An e-commerce website for aromatherapy products with a focus on brand presentation and user experience.
+A boutique e-commerce site for traditional Chinese aroma jewellery, focused on brand presentation and a calm shopping experience.
 
-## Live Demo
-
-🔗 [View Live Site](https://scent-ji.vercel.app)
+**Live site:** https://scent-ji.vercel.app
 
 ## Overview
 
-Scent-Ji is an e-commerce website designed for browsing and purchasing aromatherapy products. The project focuses on creating a visually consistent shopping experience with product showcases, interactive browsing features, and a responsive design that works across devices.
+Scent-Ji is a small e-commerce project for an aromatherapy jewellery brand. The goal of the build was to make browsing and buying feel calm rather than busy — a single product grid, a quick-view that opens in place instead of pulling the user to a new page, and a checkout flow that stays out of the way.
 
-**Project Type:** E-commerce Website
-
-## Tech Stack
-
-**Frontend:**
-- React
-- React Router
-- Vite
-- CSS
-
-**Backend:**
-- Supabase (authentication and database)
-
-**Deployment:**
-- Vercel
-
-## Key Features
-
-- Product browsing with collection pages
-- Interactive quick-view modals for products
-- Shopping cart with quantity management
-- User authentication and account management
-- Checkout flow with order summary
-- Responsive design for mobile and desktop
-- Wellness content section
+The frontend is React with Vite. Authentication and order storage run on Supabase, and the site is deployed on Vercel.
 
 ## Screenshots
 
-### Homepage
-The landing page features a clean hero section with brand identity, navigation menu, and featured product imagery.
+![Homepage](screenshots/homepage-hero.jpg)
+*Landing page introducing the brand and featured pieces.*
 
-<img src="./screenshots/homepage-hero.jpg" width="100%" alt="Scent-Ji Homepage Hero Section" />
+![Product collection](screenshots/product-collection.jpg)
+*Responsive product grid with images, names, and pricing.*
 
-### Product Collection Grid
-Product browsing interface displaying aromatherapy items with images, names, and pricing in a responsive grid layout.
+![Quick view](screenshots/product-quick-view.jpg)
+*Quick-view modal for product detail without leaving the catalogue.*
 
-<img src="./screenshots/product-collection.jpg" width="100%" alt="Product Collection Grid View" />
+## Tech Stack
 
-### Quick View Modal
-Interactive product quick view modal allowing users to see product details, select quantity, and add items to cart without leaving the current page.
+- React with React Router
+- Vite as the build tool
+- Plain CSS (no utility framework)
+- Supabase for authentication and order data
+- Vercel for hosting
 
-<img src="./screenshots/product-quick-view.jpg" width="100%" alt="Product Quick View Modal" />
+## Key Features
+
+- Product collection pages with a responsive grid.
+- Quick-view modal for inline product detail and cart adds.
+- Shopping cart with quantity adjustment.
+- Supabase-backed authentication and account management.
+- Checkout flow with an order summary step.
+- A small wellness content section for brand storytelling.
 
 ## Project Structure
 
@@ -59,74 +44,50 @@ Interactive product quick view modal allowing users to see product details, sele
 scent-ji/
 ├── src/
 │   ├── components/       # Reusable UI components
-│   ├── pages/           # Route components
-│   ├── context/         # State management
-│   ├── hooks/           # Custom React hooks
-│   ├── data/            # Product data
-│   └── lib/             # Utilities
-├── public/              # Static assets
-└── screenshots/         # Documentation images
+│   ├── pages/            # Route components
+│   ├── context/          # State management
+│   ├── hooks/            # Custom React hooks
+│   ├── data/             # Product data
+│   └── lib/              # Utilities
+├── public/               # Static assets
+├── screenshots/
+├── supabase-schema.sql
+└── SUPABASE_SETUP.md
 ```
 
-## Installation and Setup
+## Setup
 
-### Prerequisites
-- Node.js
-- Supabase account
+```bash
+git clone https://github.com/zj115/scent-ji.git
+cd scent-ji
+npm install
+```
 
-### Local Development
+Create a Supabase project, run the SQL from `supabase-schema.sql` in its SQL editor (see `SUPABASE_SETUP.md` for the longer walkthrough), then add your credentials to `.env`:
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/zj115/scent-ji.git
-   cd scent-ji
-   ```
+```
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+Then:
 
-3. **Set up Supabase**
-   - Create a new project at [supabase.com](https://supabase.com)
-   - Run the SQL schema from `supabase-schema.sql` in the Supabase SQL Editor
-   - See `SUPABASE_SETUP.md` for detailed instructions
+```bash
+npm run dev
+```
 
-4. **Configure environment variables**
-   - Copy `.env.example` to `.env`
-   - Add your Supabase credentials:
-     ```
-     VITE_SUPABASE_URL=your_supabase_project_url
-     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-     ```
+## Implementation Notes
 
-5. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+I built this as a smaller-scale e-commerce project to focus on UI behaviour rather than backend complexity. The product grid and quick-view modal were the part that took the most iteration — the quick-view needs to feel instantaneous, so it lives inside the same page rather than pushing a new route.
 
-## My Contribution
+Cart and checkout state live in a React context provider so component state stays out of individual pages. Supabase handles user accounts and order rows; the schema is small and intentionally so.
 
-I built this project to demonstrate frontend development skills with a focus on e-commerce user experience. My work included:
-
-- Designed and implemented a responsive e-commerce UI with React and CSS
-- Built reusable components for product cards, modals, and navigation
-- Implemented shopping cart functionality and checkout flow
-- Integrated Supabase for user authentication and order management
-- Created a component-based architecture for maintainability
-- Deployed the application to Vercel
+The site is deployed on Vercel with automatic builds.
 
 ## Security and Privacy
 
-- All credentials are managed through environment variables
-- No API keys or database credentials are committed to the repository
-- User data is protected with Supabase row-level security policies
-- This repository is shared for portfolio purposes with business details removed for privacy
-
-## Notes
-
-This repository is shared for portfolio and demonstration purposes. The project demonstrates my ability to build a functional e-commerce website with modern web technologies.
+Credentials live in environment variables, never the repository. User data is protected by row-level security policies in Supabase. The repo is shared for portfolio purposes with no real customer data.
 
 ## License
 
-This repository is shared for portfolio and demonstration purposes only.
+*Shared for portfolio and demonstration purposes only.*
